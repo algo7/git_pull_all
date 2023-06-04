@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// IsGitRepo check if the given folder is a github repository
 func IsGitRepo(path string) bool {
 
 	// Read the directory content of the given path
