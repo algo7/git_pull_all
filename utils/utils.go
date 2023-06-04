@@ -11,7 +11,6 @@ func IsGitRepo(path string) bool {
 	entry, err := os.ReadDir(path)
 
 	if err != nil {
-		fmt.Println(err)
 		return false
 	}
 
@@ -23,14 +22,14 @@ func IsGitRepo(path string) bool {
 			content, err := os.ReadFile(path + "/.git/config")
 
 			if err != nil {
-				fmt.Println(err)
 				return false
 			}
 
 			// show file content
 			fmt.Println(string(content))
 
+			return true
 		}
 	}
-	return true
+	return false
 }
